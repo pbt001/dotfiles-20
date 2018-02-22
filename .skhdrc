@@ -1,0 +1,44 @@
+# enter fullscreen mode for the focused container
+hyper - s : chunkc tiling::window --toggle fullscreen
+
+# rotate
+hyper - r : chunkc tiling::desktop --rotate 90
+
+# change focus between tiling / floating windows
+hyper - g : chunkc tiling::window --toggle float
+
+# change layout of desktop
+hyper - u : chunkc tiling::desktop --layout bsp
+hyper - h : chunkc tiling::desktop --layout monocle
+hyper - f : chunkc tiling::desktop --layout float
+
+hyper - q : chunkc tiling::window --close
+
+# change focus
+hyper - a : chunkc tiling::window --focus west
+hyper - n : chunkc tiling::window --focus south
+hyper - p : chunkc tiling::window --focus north
+hyper - e : chunkc tiling::window --focus east
+
+# move focused window
+hyper - up : chunkc tiling::window --warp north
+hyper - down : chunkc tiling::window --warp south
+hyper - left : chunkc tiling::window --warp west
+hyper - right : chunkc tiling::window --warp east
+
+# move focused container to workspace
+# chunkc tiling::window --send-to-desktop $(chunkc get _last_active_desktop)
+hyper - 9 : chunkc tiling::window --send-to-desktop prev
+hyper - 0 : chunkc tiling::window --send-to-desktop next
+hyper - 1 : chunkc tiling::window --send-to-desktop 1
+hyper - 2 : chunkc tiling::window --send-to-desktop 2
+hyper - 3 : chunkc tiling::window --send-to-desktop 3
+hyper - 4 : chunkc tiling::window --send-to-desktop 4
+hyper - 5 : chunkc tiling::window --send-to-desktop 5
+hyper - 6 : chunkc tiling::window --send-to-desktop 6
+
+# ratio
+hyper - m : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge west; chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge east
+hyper - v : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge south; chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge north
+hyper - w : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge north; chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge south
+hyper - z : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge east; chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge west

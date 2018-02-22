@@ -1,0 +1,12 @@
+[user]
+  name = CHEN Xian-an
+  email = xianan.chen@gmail.com
+[core]
+  editor = emacs
+  excludesfile = ~/.gitignore
+[alias]
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %C(blue)%s%Creset %C(dim cyan)<%an>%Creset %C(dim white)(%ci)%Creset' --abbrev-commit
+[help]
+  autocorrect = 1
+[credential]
+  helper = osxkeychain
