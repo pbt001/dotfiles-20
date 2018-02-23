@@ -79,9 +79,11 @@ update: (output, domEl) ->
   volume = values[7]
 
   # create an HTML string to be displayed by the widget
+  bat = @batteryStatus(battery, isCharging)
+  bat = (bat && bat + "<span class='grey'>" + " | " + "</span>") || "";
   htmlString = @getVolume(volume) + "<span class='grey'>" + " | " + "</span>" +
                @getWifiStatus(netStatus, netName, netIP) + "<span class='grey'>" + " | " + "</span>" +
-               @batteryStatus(battery, isCharging) + "<span class='grey'>" + " | " + "</span>" +
+               bat +
                @timeAndDate(date,time)
 
   $(domEl).find('.compstatus').html(htmlString)
