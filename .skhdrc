@@ -1,18 +1,5 @@
 # enter fullscreen mode for the focused container
-hyper - s : chunkc tiling::window --toggle fullscreen
-
-# rotate
-hyper - r : chunkc tiling::desktop --rotate 90
-
-# change focus between tiling / floating windows
-hyper - g : chunkc tiling::window --toggle float
-
-# change layout of desktop
-hyper - u : chunkc tiling::desktop --layout bsp
-hyper - h : chunkc tiling::desktop --layout monocle
-hyper - f : chunkc tiling::desktop --layout float
-
-hyper - q : chunkc tiling::window --close
+hyper - f : chunkc tiling::window --toggle fullscreen
 
 # change focus
 hyper - a : chunkc tiling::window --focus west
