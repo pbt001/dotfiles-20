@@ -4,8 +4,10 @@
 # NOTE: specify the absolutepath to the directory to use when
 #       loading a plugin. '~' expansion is supported.
 #
+chunkc core::log_file stdout
+chunkc core::log_level debug
 
-#chunkc core::plugin_dir /usr/local/opt/chunkwm/share/chunkwm/plugins
+chunkc core::plugin_dir /usr/local/opt/chunkwm/share/chunkwm/plugins
 
 #
 # NOTE: if enabled, chunkwm will monitor the specified plugin_dir
@@ -14,7 +16,6 @@
 
 chunkc core::hotload 1
 chunkc core::unload tiling.so
-chunkc core::unload ffm.so
 chunkc core::unload border.so
 
 #
@@ -24,11 +25,11 @@ chunkc core::unload border.so
 chunkc set global_desktop_mode           bsp
 chunkc set 1_desktop_mode                float
 
-chunkc set global_desktop_offset_top     24
-chunkc set global_desktop_offset_bottom  24
-chunkc set global_desktop_offset_left    12
-chunkc set global_desktop_offset_right   12
-chunkc set global_desktop_offset_gap     12
+chunkc set global_desktop_offset_top     26
+chunkc set global_desktop_offset_bottom  26
+chunkc set global_desktop_offset_left    14
+chunkc set global_desktop_offset_right   14
+chunkc set global_desktop_offset_gap     14
 
 chunkc set desktop_padding_step_size     10.0
 chunkc set desktop_gap_step_size         5.0
@@ -52,21 +53,20 @@ chunkc set preselect_border_color        0xffffffff
 chunkc set preselect_border_width        0
 chunkc set preselect_border_radius       0
 
-chunkc set focused_border_color          0xffd07a40
-chunkc set focused_border_width          5
+chunkc set focused_border_color          0xffff0000
+chunkc set focused_border_width          3
 chunkc set focused_border_radius         0
 chunkc set focused_border_skip_floating  1
+chunkc set focused_border_skip_monocle   1
 
 #
 # NOTE: specify plugins to load when chunkwm starts.
 #       if chunkc plugin_dir is not set, the absolutepath is necessary.
 #
 
-#chunkc core::load border.so
-chunkc core::load /Users/cxa/.chunkwm_plugins/tiling.so
-chunkc core::load /Users/cxa/.chunkwm_plugins/border.so
-# chunkc core::load ffm.so
+chunkc core::load border.so
+chunkc core::load tiling.so
 
 chunkc tiling::rule --owner Emacs --subrole AXStandardWindow --state tile
 chunkc tiling::rule --owner Emacs --subrole AXDialog --state float
-#chunkc tiling::rule --owner Emacs --except "^$" --state tile
+chunkc tiling::rule --owner Emacs --except "^$" --state tile
