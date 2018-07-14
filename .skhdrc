@@ -1,5 +1,6 @@
 # enter fullscreen mode for the focused container
-hyper - f : chunkc tiling::window --toggle fullscreen
+hyper - f : chunkc tiling::window --toggle float
+hyper - y : chunkc tiling::window --toggle fullscreen
 
 # change focus
 hyper - a : chunkc tiling::window --focus west
@@ -25,10 +26,10 @@ hyper - 5 : chunkc tiling::window --send-to-desktop 5
 hyper - 6 : chunkc tiling::window --send-to-desktop 6
 
 # ratio
-hyper - m : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge west; chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge east
-hyper - v : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge south; chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge north
-hyper - w : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge north; chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge south
-hyper - z : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge east; chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge west
+hyper - u : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge west; chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge east
+hyper - i : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge south; chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge north
+hyper - d : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge north; chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge south
+hyper - h : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge east; chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge west
 
 # disable border temporary
 cmd + shift - 4 -> : chunkc border::clear
