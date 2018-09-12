@@ -70,3 +70,4 @@ chunkc core::load tiling.so
 chunkc tiling::rule --owner Emacs --subrole AXStandardWindow --state tile
 chunkc tiling::rule --owner Emacs --subrole AXDialog --state float
 chunkc tiling::rule --owner Emacs --except "^$" --state tile
+chunkc tiling::rule --owner Electron --state float
